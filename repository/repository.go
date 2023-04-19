@@ -12,7 +12,7 @@ type Repo struct {
 }
 
 type RepoInterface interface {
-	EmployeeRepo
+	// EmployeeRepo
 	BookRepo
 }
 

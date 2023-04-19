@@ -29,6 +29,7 @@ func (r Repo) GetAllBook() (res []model.Book, err error) {
 	if err != nil {
 		return res, err
 	}
+
 	return res, nil
 }
 

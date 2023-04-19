@@ -7,7 +7,7 @@ type Service struct {
 }
 
 type ServiceInterface interface {
-	EmployeeService
+	// EmployeeService
 	BookService
 }
 

@@ -1,6 +1,9 @@
 package service
 
-import "sesi_8/model"
+import (
+	"errors"
+	"sesi_8/model"
+)
 
 type BookService interface {
 	CreateBook(in model.Book) (res model.Book, err error)
@@ -21,6 +24,9 @@ func (s *Service) CreateBook(in model.Book) (res model.Book, err error) {
 
 func (s *Service) GetAllBook() (res []model.Book, err error) {
 	res, err = s.repo.GetAllBook()
+	if len(res) == 0 {
+		return res, errors.New("record not found")
+	}
 	if err != nil {
 		return res, err
 	}
